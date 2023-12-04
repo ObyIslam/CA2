@@ -8,9 +8,9 @@
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="92,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"><Run Language="en-gb" Text="Teams"/></TextBlock>
-        <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="188" Margin="92,117,0,0" VerticalAlignment="Top" Width="124" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="188" Margin="92,117,0,0" VerticalAlignment="Top" Width="210" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="348,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"><Run Language="en-gb" Text="Players"/></TextBlock>
-        <ListBox x:Name="lbxPlayers" HorizontalAlignment="Left" Height="188" Margin="348,117,0,0" VerticalAlignment="Top" Width="157" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="lbxPlayers" HorizontalAlignment="Left" Height="188" Margin="348,117,0,0" VerticalAlignment="Top" Width="241" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <TextBlock HorizontalAlignment="Left" Height="25" Margin="654,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"><Run Language="en-gb" Text="Player Rating"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="28" Margin="655,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"><Run Language="en-gb" Text="Record Result"/></TextBlock>
         <Button x:Name="Win" Content="Win" HorizontalAlignment="Left" Height="24" Margin="665,281,0,0" VerticalAlignment="Top" Width="47"/>
