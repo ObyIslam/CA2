@@ -13,6 +13,21 @@ namespace CA2
         public string Name { get; set; }
         public List<Player> Players { get; set; }
 
+        public int TeamPoints
+        {
+            get
+            {
+                int points = 0;
+
+                foreach (Player player in Players)
+                {
+                    points += player.Points;
+                }
+
+                return points;
+            }
+        }
+
 
         public Team()
         {
@@ -21,7 +36,7 @@ namespace CA2
 
         public override string ToString()
         {
-            return $"{Name}";
+            return $"{Name} - {TeamPoints}";
         }
     }
 }

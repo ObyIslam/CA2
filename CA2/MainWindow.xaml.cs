@@ -34,7 +34,6 @@ namespace CA2
             Teams = GetData();
             lbxTeams.ItemsSource = Teams;
 
-
         }
 
         public List<Team> GetData()
@@ -63,11 +62,52 @@ namespace CA2
             Player p8 = new Player() { Name = "Jose", ResultRecord = "LLLLL" };
             Player p9 = new Player() { Name = "Pablo", ResultRecord = "DDDDD" };
 
-            Teams[0].Players.AddRange(new List<Player> { p1, p2, p3 }); // France
-            Teams[1].Players.AddRange(new List<Player> { p4, p5, p6 }); // Italy
-            Teams[2].Players.AddRange(new List<Player> { p7, p8, p9 }); //Spain
+            teams[0].Players.AddRange(new List<Player> { p1, p2, p3 }); // France
+            teams[1].Players.AddRange(new List<Player> { p4, p5, p6 }); // Italy
+            teams[2].Players.AddRange(new List<Player> { p7, p8, p9 }); //Spain
 
             return teams;
         }
+
+        private void lbxTeams_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            Team teams = lbxTeams.SelectedItem as Team;
+
+            if (lbxTeams.SelectedItems != null)
+            {
+                lbxPlayers.ItemsSource = teams.Players;
+            }
+        }
+
+        private void UpdateResult(char result)
+        {
+            if (lbxPlayers.SelectedItem != null)
+            {
+                Player player = (Player)lbxPlayers.SelectedItem;
+
+                if (player.ResultRecord.Length >= 5)
+                {
+                    player.ResultRecord = player.ResultRecord.Substring(1) + result;
+                    lbxPlayers.Items.Refresh();
+                }
+            }
+        }
+
+        private void Win_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateResult('W');
+        }
+
+        private void Loss_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateResult('L');
+        }
+
+        private void Draw_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateResult('D');
+        }
+
     }
 }
