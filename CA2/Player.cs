@@ -36,6 +36,17 @@ namespace CA2
             }
         }
 
+        //public void StarRatings()
+        //{
+        //    string points0 = @"../../../0points";
+        //    string points1to5 = @"../../../1-5points";
+        //    string points6to10 = @"../../../6-10points";
+        //    string points11to15 = "../../../11-15points";
+
+
+
+        //}
+
 
         public override string ToString() { return $"{Name} - Result Record: {ResultRecord} - {Points}"; }
     }

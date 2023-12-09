@@ -16,6 +16,10 @@
         <Button x:Name="Win" Content="Win" HorizontalAlignment="Left" Height="24" Margin="665,281,0,0" VerticalAlignment="Top" Width="47" Click="Win_Click"/>
         <Button x:Name="Loss" Content="Loss" HorizontalAlignment="Left" Height="24" Margin="665,324,0,0" VerticalAlignment="Top" Width="47" Click="Loss_Click"/>
         <Button x:Name="Draw" Content="Draw" HorizontalAlignment="Left" Height="24" Margin="665,368,0,0" VerticalAlignment="Top" Width="47" Click="Draw_Click"/>
+        
+        <Image Source="/images/0 points.png" Margin="600,117,24,276" />
+
+        
 
     </Grid>
 </Window>
