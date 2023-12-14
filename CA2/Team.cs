@@ -14,7 +14,7 @@ namespace CA2
         public List<Player> Players { get; set; }
 
 
-        public int TeamPoints
+        public int TeamPoints//calculate team points
         {
             get
             {
@@ -39,7 +39,7 @@ namespace CA2
             return $"{Name} - {TeamPoints}";
         }
 
-        public int CompareTo(Team teams)
+        public int CompareTo(Team teams)//sorting 
         {
             return teams.TeamPoints.CompareTo(this.TeamPoints);
         }

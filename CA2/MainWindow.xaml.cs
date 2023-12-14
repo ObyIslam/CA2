@@ -119,33 +119,41 @@ namespace CA2
             UpdateResult('D');
         }
 
-        public void StarRatings()
-        {
-            string imagePath = "";
-            string points0 = @"../../../0points";
-            string points1to5 = @"../../../1-5points";
-            string points6to10 = @"../../../6-10points";
-            string points11to15 = @"../../../11-15points";
+        //private void lbxPlayers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    image.Source = new BitmapImage(new Uri("/images/0points.jpg", UriKind.Relative));
+        //}
 
-            Player player = new Player();
 
-            if(player.Points == 0)
-            {
-                imagePath = @"../../../0points";
-            }
-            else if (player.Points >= 1 && player.Points <= 5)
-            {
-                imagePath = @"../../../1-5points";
-            }
-            else if (player.Points >= 6 && player.Points <= 10)
-            {
-                imagePath = @"../../../6-10points";
-            }
-            else if (player.Points >= 11 && player.Points <= 15)
-            {
-                imagePath = @"../../../11-15points";
-            }
-        }
+
+
+        //public void StarRatings()
+        //{
+        //    string imagePath = "";
+        //    string points0 = @"../../../0points";
+        //    string points1to5 = @"../../../1-5points";
+        //    string points6to10 = @"../../../6-10points";
+        //    string points11to15 = @"../../../11-15points";
+
+        //    Player player = new Player();
+
+        //    if(player.Points == 0)
+        //    {
+        //        imagePath = @"../../../0points";
+        //    }
+        //    else if (player.Points >= 1 && player.Points <= 5)
+        //    {
+        //        imagePath = @"../../../1-5points";
+        //    }
+        //    else if (player.Points >= 6 && player.Points <= 10)
+        //    {
+        //        imagePath = @"../../../6-10points";
+        //    }
+        //    else if (player.Points >= 11 && player.Points <= 15)
+        //    {
+        //        imagePath = @"../../../11-15points";
+        //    }
+        //}
 
     }
 }

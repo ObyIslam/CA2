@@ -10,7 +10,7 @@ namespace CA2
     {
         public string Name { get; set; }
         public string ResultRecord { get; set; }
-        public int Points
+        public int Points //adding points or removing points
         {
             get
             {
@@ -20,15 +20,15 @@ namespace CA2
                 if (!string.IsNullOrEmpty(ResultRecord) && ResultRecord.Length >= 5)
                 {
                     string lastFiveResults = ResultRecord.Substring(ResultRecord.Length - 5);
-                    foreach (char result in lastFiveResults) 
-                    { 
+                    foreach (char result in lastFiveResults)
+                    {
                         if (result == 'W')
                         {
-                            points += 3; 
+                            points += 3;
                         }
                         else if (result == 'D')
                         {
-                            points += 1; 
+                            points += 1;
                         }
                     }
                 }
@@ -36,19 +36,15 @@ namespace CA2
             }
         }
 
-        //public void StarRatings()
-        //{
-        //    string points0 = @"../../../0points";
-        //    string points1to5 = @"../../../1-5points";
-        //    string points6to10 = @"../../../6-10points";
-        //    string points11to15 = "../../../11-15points";
+        
 
 
 
-        //}
 
-
-        public override string ToString() { return $"{Name} - Result Record: {ResultRecord} - {Points}"; }
+        public override string ToString() 
+        { 
+            return $"{Name} - Result Record: {ResultRecord} - {Points}"; 
+        }
     }
 }
 
